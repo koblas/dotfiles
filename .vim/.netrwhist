@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/koblas/repos/inventory/apps'
+let g:netrw_dirhist_2='/Users/koblas/repos/inventory/apps/inventory/handlers'
+let g:netrw_dirhist_3='/Users/koblas/.vim'
+let g:netrw_dirhist_4='/Users/koblas/repos/tubular/frontend/deployment'
+let g:netrw_dirhist_5='/Users/koblas/repos/tubular/ingestion/tube/conf'
+let g:netrw_dirhist_6='/Users/koblas/repos/tubular/ingestion/tube'
+let g:netrw_dirhist_7='/Users/koblas/repos/tubular/ingestion/tube/commands'
+let g:netrw_dirhist_8='/Users/koblas/repos/tubular/chef'
