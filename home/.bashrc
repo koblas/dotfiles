@@ -32,6 +32,10 @@ shopt -s checkwinsize
 # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
 if [[ -f ~/.dir_colors ]] ; then
 	eval $(dircolors -b ~/.dir_colors)
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 elif [[ -f /etc/DIR_COLORS ]] ; then
 	eval $(dircolors -b /etc/DIR_COLORS)
 fi
