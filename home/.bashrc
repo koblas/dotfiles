@@ -14,6 +14,21 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+### Begin from AWS
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+### End from AWS
+
 # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
 if [[ -f ~/.dir_colors ]] ; then
 	eval $(dircolors -b ~/.dir_colors)
@@ -55,5 +70,10 @@ else
     PS1="${PROMPT_COLOR}${TITLEBAR}[\h:\w] $ "
 fi
 
-alias zipon='mysql --user=scott --password=tiger --host=127.1 zipon'
-alias totallypsp='mysql --user=scott --password=tiger --host=127.1 totallypsp'
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
